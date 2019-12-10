@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/materialize.min.css" media="screen,projection">
+    <link rel="stylesheet" href="css/style.css" media="screen,projection">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <title>PWEB Movie</title>
+  </head>
+  <body>
+    <nav class="black" role="navigation">
+        <div class="nav-wrapper container">
+          <a href="/praktikum9" class="brand-logo white-text">PWEB Movie</a>
+          <ul class="topnav right hide-on-med-and-down">
+            <li><a href="#index.html#playing" class="white-text">Now Playing</a></li>
+            <li><a href="#index.html#upcoming" class="white-text">Up Coming</a></li>
+            <li><a href="#index.html#popular" class="white-text">Popular</a></li>
+            <li><a href="#index.html#toprated" class="white-text">Top Rated</a></li>
+          </ul>
+
+          <ul id="nav-mobile" class="sidenav">
+            <li><a href="#index.html#playing">Now Playing</a></li>
+            <li><a href="#index.html#upcoming">Up Coming</a></li>
+            <li><a href="#index.html#popular">Popular</a></li>
+            <li><a href="#index.html#toprated">Top Rated</a></li>
+          </ul>
+          <a href="#" data-target="nav-mobile" class="sidenav-trigger">
+            <i class="material-icons white-text">menu</i></a>
+        </div>
+      </nav>
+
+      <div class="container">
+        <h4 id="section_title">Movie Detail</h4>
+
+        <div class="row">
+          <div id="movie_detail">
+          </div>
+        </div>
+      </div>
+
+      <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+      <script type="text/javascript" src="js/materialize.min.js"></script>
+      <script type="text/javascript" src="js/init.js"></script>
+      <script type="text/javascript" src="js/api.js"></script>
+      <script type="text/javascript" src="js/tmdb.js"></script>
+
+      <script type="text/javascript">
+        document.addEventListener("DOMContentLoaded", function() {
+          var urlParams = new URLSearchParams(window.location.search);
+          var id = urlParams.get("id");
+          getMovie( id );
+
+          });
+
+           // getListMovie("/movie/movie_id", "Movie");
+         });
+          </script>
+
+  </body>
+</html>
